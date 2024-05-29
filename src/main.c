@@ -2,9 +2,11 @@
 
 #include "include/developer.h"
 #include "include/main_menu.h"
+#include "include/world_map.h"
 
 #include "developer.c"
 #include "main_menu.c"
+#include "world_map.c"
 
 void update(f32 delta_time)
 {
@@ -22,10 +24,7 @@ void update(f32 delta_time)
     break;
     case gs_world_map:
     {
-        if (IsKeyPressed(KEY_BACKSPACE))
-        {
-            game_state = gs_developer_menu;
-        }
+        world_map_update(delta_time);
     }
     break;
     case gs_town_view:
@@ -67,7 +66,10 @@ void render()
     }
     break;
     case gs_world_map:
-        break;
+    {
+        world_map_render();
+    }
+    break;
     case gs_town_view:
         break;
     case gs_game_over:
