@@ -8,6 +8,9 @@
 
 #include "raylib.h"
 
+#define VERSION_MAJOR 0
+#define VERSION_MINOR 1
+
 #define GAME_WIDTH 1920 / 2
 #define GAME_HEIGHT 1080 / 2
 

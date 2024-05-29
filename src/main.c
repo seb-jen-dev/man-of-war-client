@@ -78,7 +78,7 @@ void render()
 
 int main()
 {
-    InitWindow(GAME_WIDTH, GAME_HEIGHT, "Final Game Prototype");
+    InitWindow(GAME_WIDTH, GAME_HEIGHT, TextFormat("Man Of War v. %d.%d", VERSION_MAJOR, VERSION_MINOR));
 
     while (!WindowShouldClose())
     {
